@@ -29,7 +29,11 @@
             app:layout_constraintTop_toTopOf="@id/containerCirculo"
             app:layout_constraintStart_toStartOf="@id/containerCirculo"
             app:layout_constraintEnd_toEndOf="@id/containerCirculo"
-            app:layout_constraintBottom_toBottomOf="@id/containerCirculo"
+            app:layout_constraintBottom_toBottomOf="@id/containerCirculo" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             />
 
 
