@@ -60,7 +60,8 @@
             android:src="@drawable/ic_question"
             android:layout_marginTop="60dp"
             app:layout_constraintStart_toEndOf="@id/icEye"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/icPersonAdd"/>
 
         <ImageView
             android:id="@+id/icPersonAdd"
