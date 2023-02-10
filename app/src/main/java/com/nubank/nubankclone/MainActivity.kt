@@ -24,6 +24,34 @@ class MainActivity : AppCompatActivity() {
         val recyclerIconesPagamento = binding.recyclerIconesPagamentos
         recyclerIconesPagamento.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerIconesPagamento.setHasFixedSize(true)
-        adapterPagamento = AdapterPagamento()
+        adapterPagamento = AdapterPagamento(this, listaPagamento)
+        recyclerIconesPagamento.adapter = adapterPagamento
     }
+
+    private fun listaIconesPagamento(){
+        val icone1 = Pagamento(R.drawable.ic_pix, "Área Pix")
+        listaPagamento.add(icone1)
+
+        val icone2 = Pagamento(R.drawable.barcode, "Pagar")
+        listaPagamento.add(icone2)
+
+        val icone3 = Pagamento(R.drawable.emprestimo, "Pegar Emprestado")
+        listaPagamento.add(icone3)
+
+        val icone4 = Pagamento(R.drawable.transferencia, "Transferir")
+        listaPagamento.add(icone4)
+
+        val icone5 = Pagamento(R.drawable.depositar, "Depositar")
+        listaPagamento.add(icone5)
+
+        val icone6 = Pagamento(R.drawable.ic_recarga_celular, "Recarga de celular")
+        listaPagamento.add(icone6)
+
+        val icone7 = Pagamento(R.drawable.ic_cobrar, "Cobrar")
+        listaPagamento.add(icone7)
+
+        val icone8 = Pagamento(R.drawable.doacao, "Doação")
+        listaPagamento.add(icone8)
+    }
+
 }
