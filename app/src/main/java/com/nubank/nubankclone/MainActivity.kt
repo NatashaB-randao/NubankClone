@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         val icone2 = Pagamento(R.drawable.barcode, "Pagar")
         listaPagamento.add(icone2)
 
-        val icone3 = Pagamento(R.drawable.emprestimo, "Pegar Emprestado")
+        val icone3 = Pagamento(R.drawable.emprestimo, "Pegar \n Emprestado")
         listaPagamento.add(icone3)
 
         val icone4 = Pagamento(R.drawable.transferencia, "Transferir")
@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         val icone5 = Pagamento(R.drawable.depositar, "Depositar")
         listaPagamento.add(icone5)
 
-        val icone6 = Pagamento(R.drawable.ic_recarga_celular, "Recarga de celular")
+        val icone6 = Pagamento(R.drawable.ic_recarga_celular, "Recarga \n de celular")
         listaPagamento.add(icone6)
 
         val icone7 = Pagamento(R.drawable.ic_cobrar, "Cobrar")
