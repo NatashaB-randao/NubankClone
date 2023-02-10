@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         recyclerIconesPagamento.setHasFixedSize(true)
         adapterPagamento = AdapterPagamento(this, listaPagamento)
         recyclerIconesPagamento.adapter = adapterPagamento
+        listaIconesPagamento()
     }
 
     private fun listaIconesPagamento(){
