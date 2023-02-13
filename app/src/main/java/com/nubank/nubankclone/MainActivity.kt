@@ -5,14 +5,18 @@ import android.os.Bundle
 import android.widget.Adapter
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nubank.nubankclone.adapter.AdapterPagamento
+import com.nubank.nubankclone.adapter.AdapterProduto
 import com.nubank.nubankclone.databinding.ActivityMainBinding
 import com.nubank.nubankclone.model.Pagamento
+import com.nubank.nubankclone.model.Produto
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapterPagamento: AdapterPagamento
+    private lateinit var adapterProduto: AdapterProduto
     private val listaPagamento: MutableList<Pagamento> = mutableListOf()
+    private val listaProduto: MutableList<Produto> = mutableListOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +31,13 @@ class MainActivity : AppCompatActivity() {
         adapterPagamento = AdapterPagamento(this, listaPagamento)
         recyclerIconesPagamento.adapter = adapterPagamento
         listaIconesPagamento()
+
+        val recyclerProdutos = binding.recyclerProdutos
+        recyclerProdutos.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        recyclerProdutos.setHasFixedSize(true)
+        adapterProduto = AdapterProduto(this, listaProduto)
+        recyclerProdutos.adapter = adapterProduto
+        listaProduto
     }
 
     private fun listaIconesPagamento(){
@@ -53,6 +64,20 @@ class MainActivity : AppCompatActivity() {
 
         val icone8 = Pagamento(R.drawable.doacao, "Doação")
         listaPagamento.add(icone8)
+    }
+
+    private fun listaTextoInformativo(){
+        val textoInformativo1 = Produto("Participe da Promoção Tudo no Roxinho e concorra a...")
+        listaProduto.add(textoInformativo1)
+
+        val textoInformativo2 = Produto("Chegou o débito automático da fatura do cartão")
+        listaProduto.add(textoInformativo2)
+
+        val textoInformativo3 = Produto("Conheça a conta PJ: prática e livre de burocracia para se...")
+        listaProduto.add(textoInformativo3)
+
+        val textoInformativo4 = Produto("Salve seus amigos da burocracia: Faça um convite...")
+        listaProduto.add(textoInformativo4)
     }
 
 }
