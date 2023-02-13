@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
         recyclerProdutos.setHasFixedSize(true)
         adapterProduto = AdapterProduto(this, listaProduto)
         recyclerProdutos.adapter = adapterProduto
-        listaProduto
+        listaTextoInformativo()
     }
 
     private fun listaIconesPagamento(){
